@@ -137,9 +137,9 @@ export function themeTokens(theme: AppTheme | FormTheme, names: Names = 'both'):
     if (theme.group === 'app') {
         out['--ez-font-body'] = out['--md-ref-typeface-plain'] = theme.font.body;
         out['--ez-font-heading'] = out['--md-ref-typeface-brand'] = theme.font.heading;
-        out['--ez-radius'] = `${theme.radius}px`;
-        if (names === 'ez') { delete out['--md-ref-typeface-plain']; delete out['--md-ref-typeface-brand']; }
-        if (names === 'md') { delete out['--ez-font-body']; delete out['--ez-font-heading']; }
+        out['--ez-radius'] = out['--md-sys-shape-corner-small'] = `${theme.radius}px`;
+        if (names === 'ez') { delete out['--md-ref-typeface-plain']; delete out['--md-ref-typeface-brand']; delete out['--md-sys-shape-corner-small']; }
+        if (names === 'md') { delete out['--ez-font-body']; delete out['--ez-font-heading']; delete out['--ez-radius']; }
     } else if (typeof theme.tokens.fontFamily === 'string') {
         out[names === 'md' ? '--md-ref-typeface-plain' : '--ez-font-body'] = theme.tokens.fontFamily;
         if (names === 'both') out['--md-ref-typeface-plain'] = theme.tokens.fontFamily;
