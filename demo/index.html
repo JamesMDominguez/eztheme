@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eztheme</title>
+<style>
+  /* Everything below reads only the theme's tokens: switch themes and it all follows. */
+  body { margin: 0; background: var(--ez-surface-muted); color: var(--ez-text); font: 15px/1.5 var(--ez-font-body, system-ui, sans-serif); transition: background .3s, color .3s; }
+  main { max-width: 980px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1, h2 { font-family: var(--ez-font-heading, inherit); }
+  h1 { font-size: 34px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 40px 0 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--ez-text-muted); }
+  p { margin: 0; color: var(--ez-text-muted); max-width: 62ch; }
+  .bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 20px; }
+  select { font: inherit; padding: 8px 12px; border-radius: var(--ez-radius, 8px); border: 1px solid var(--ez-outline); background: var(--ez-surface); color: var(--ez-text); }
+  .card { background: var(--ez-surface); border: 1px solid var(--ez-border); border-radius: calc(var(--ez-radius, 8px) * 2); padding: 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+  .ladder { display: grid; grid-template-columns: repeat(6, 1fr); border-radius: var(--ez-radius, 8px); overflow: hidden; border: 1px solid var(--ez-outline-variant); }
+  .ladder div { padding: 18px 10px 10px; font-size: 12px; color: var(--ez-text); }
+  .btn { font: inherit; border: 0; cursor: pointer; padding: 10px 18px; border-radius: 999px; }
+  .btn.filled { background: var(--ez-accent); color: var(--ez-on-accent); }
+  .btn.tonal { background: var(--ez-accent-soft); color: var(--ez-text); }
+  .btn.neutral { background: var(--ez-fill); color: var(--ez-text); }
+  .btn.neutral:hover { background: var(--ez-fill-hover); }
+  .chip { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  label { display: grid; gap: 6px; font-size: 13px; }
+  input { font: inherit; padding: 10px 12px; border-radius: var(--ez-radius, 8px); border: 1px solid var(--ez-outline); background: var(--ez-surface); color: var(--ez-text); }
+  .err { color: var(--ez-danger-ink); font-size: 13px; }
+  code { font: 12px ui-monospace, Menlo, monospace; }
+  #names { font: 12px/1.6 ui-monospace, Menlo, monospace; color: var(--ez-text-muted); white-space: pre-wrap; max-height: 260px; overflow: auto; }
+</style>
+</head>
+<body>
+<main>
+  <h1>eztheme</h1>
+  <p>Themes as data: 15 app looks, 28 form looks and the Studio theme. Each becomes CSS custom properties in ezinputs (<code>--ez-*</code>) or Material 3 (<code>--md-sys-*</code>) names.</p>
+  <div class="bar">
+    <select id="pick" aria-label="Theme"></select>
+    <button class="btn neutral" id="next">Next theme</button>
+    <span id="meta"></span>
+  </div>
+
+  <h2>Surfaces</h2>
+  <div class="ladder" id="ladder"></div>
+
+  <h2>Actions and status</h2>
+  <div class="card">
+    <div class="row"><button class="btn filled">Submit</button><button class="btn tonal">Save draft</button><button class="btn neutral">Cancel</button></div>
+    <div class="row" style="margin-top:14px">
+      <span class="chip" style="background:var(--ez-success-soft);color:var(--ez-success-ink)">Approved</span>
+      <span class="chip" style="background:var(--ez-warning-soft);color:var(--ez-warning-ink)">Pending</span>
+      <span class="chip" style="background:var(--ez-danger-soft);color:var(--ez-danger-ink)">Rejected</span>
+      <span class="chip" style="background:var(--ez-info-soft);color:var(--ez-info-ink)">In review</span>
+    </div>
+  </div>
+
+  <h2>A form</h2>
+  <div class="grid">
+    <div class="card"><label>Your name<input value="Marisol Castaneda"></label></div>
+    <div class="card"><label>Email<input value="marisol@" aria-invalid="true"></label><div class="err">Enter a full email address.</div></div>
+    <div class="card" style="background:var(--ez-surface-container)"><b>Section</b><p>A panel one step back from the card.</p></div>
+  </div>
+
+  <h2>Tokens written</h2>
+  <div class="card"><div id="names"></div></div>
+</main>
+<script type="module">
+  import { THEMES, applyTheme } from '../dist/eztheme.min.js';
+  const $ = (id) => document.getElementById(id);
+  const key = (t) => (t.group === 'form' ? `form:${t.id}` : t.id);
+  const groups = { app: 'App themes', studio: 'Studio', form: 'Form themes' };
+  for (const [g, label] of Object.entries(groups)) {
+    const og = document.createElement('optgroup'); og.label = label;
+    for (const t of THEMES.filter((x) => x.group === g)) og.append(new Option(t.name, key(t)));
+    $('pick').append(og);
+  }
+  const rungs = [['--ez-surface-muted', 'page'], ['--ez-surface', 'surface'], ['--ez-surface-low', 'low'], ['--ez-surface-container', 'container'], ['--ez-surface-high', 'high'], ['--ez-fill', 'fill']];
+  $('ladder').innerHTML = rungs.map(([v, n]) => `<div style="background:var(${v})">${n}</div>`).join('');
+  const show = (id) => {
+    const tokens = applyTheme(id);
+    const t = THEMES.find((x) => key(x) === id);
+    $('meta').textContent = `${t.group} · ${document.documentElement.style.colorScheme}`;
+    $('names').textContent = Object.entries(tokens).filter(([k]) => !k.startsWith('--md-ref')).map(([k, v]) => `${k}: ${v}`).join('\n');
+    history.replaceState(null, '', `#${id}`);
+  };
+  $('pick').onchange = () => show($('pick').value);
+  $('next').onclick = () => { const s = $('pick'); s.selectedIndex = (s.selectedIndex + 1) % s.options.length; show(s.value); };
+  const start = decodeURIComponent(location.hash.slice(1)) || 'corkboard';
+  $('pick').value = start; show($('pick').value || 'light');
+</script>
+</body>
+</html>

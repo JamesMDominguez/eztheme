@@ -22,6 +22,7 @@ describe('applyTheme', () => {
         applyTheme('studio');
         expect(root().style.getPropertyValue('--md-sys-color-primary')).toBe('var(--md-ref-palette-primary80)');
         expect(root().style.colorScheme).toBe('dark');
+        expect(root().style.getPropertyValue('--ez-accent')).toBe('var(--md-sys-color-primary)');
     });
     it('clearTheme takes it all off', () => {
         applyTheme('dark');

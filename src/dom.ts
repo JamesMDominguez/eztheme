@@ -6,7 +6,7 @@
  */
 
 import { getTheme } from './index.js';
-import { studioTokens, themeTokens, type Names, type Tokens } from './tokens.js';
+import { studioEzTokens, studioTokens, themeTokens, type Names, type Tokens } from './tokens.js';
 import type { Theme } from './types.js';
 
 export interface ApplyOptions {
@@ -41,7 +41,7 @@ export function applyTheme(theme: Theme | string, { target, names = 'both', sche
     if (t.group === 'studio') {
         const sets = studioTokens(t);
         const s = studioScheme(el, scheme);
-        tokens = { ...sets[s] };
+        tokens = { ...sets[s], ...(names !== 'md' ? studioEzTokens() : {}) };
         delete tokens['color-scheme'];
         el.style.colorScheme = s;
     } else {
