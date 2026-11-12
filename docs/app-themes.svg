@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 928 446" width="928" height="446">
+<g transform="translate(8 8)">
+  <rect width="168" height="118" rx="12" fill="#f8fafc" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#ffffff" stroke="rgba(0, 0, 0, 0.12)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#0f172a"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#4b5563"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#2563eb"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#dcf6e5"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#166534"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#fde5e5"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#b91c1c"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Light</text>
+</g>
+<g transform="translate(192 8)">
+  <rect width="168" height="118" rx="12" fill="#0b1220" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#0f172a" stroke="rgba(255, 255, 255, 0.12)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#e5e7eb"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#9ca3af"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#60a5fa"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="rgba(0, 0, 0, 0.87)"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#133d35"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#86efac"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#402130"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#fca5a5"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Dark</text>
+</g>
+<g transform="translate(376 8)">
+  <rect width="168" height="118" rx="12" fill="#e6ca92" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#f7f2e6" stroke="#2a2a2a"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#1f1f1f"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#4a4a46"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#1f2a24"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(229, 230, 209)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#496c2c"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(238, 221, 207)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#a83f2a"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Retro</text>
+</g>
+<g transform="translate(560 8)">
+  <rect width="168" height="118" rx="12" fill="#ecebe6" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#f6f5f1" stroke="#2b2b28"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#171715"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#4a4a45"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#d72d2d"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(222, 233, 222)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#246e3c"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(242, 221, 217)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#bd2727"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Retro Game</text>
+</g>
+<g transform="translate(744 8)">
+  <rect width="168" height="118" rx="12" fill="#ffe66d" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#ffffff" stroke="#111111"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#111111"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#2c2c2c"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#111111"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#dcf6e5"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#166534"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#fde5e5"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#b91c1c"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Neo-Brutalism</text>
+</g>
+<g transform="translate(8 154)">
+  <rect width="168" height="118" rx="12" fill="#ff9de1" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#ffffff" stroke="#111111"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#111111"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#252525"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#111111"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#dcf6e5"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#166534"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#fde5e5"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#b91c1c"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Neo-Brutalism Pop</text>
+</g>
+<g transform="translate(192 154)">
+  <rect width="168" height="118" rx="12" fill="#c0c0c0" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#fefefe" stroke="#808080"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#000000"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#3c3c3c"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#000080"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#dcf6e5"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#166534"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#fde5e5"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#b91c1c"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">90s Retro-Tech</text>
+</g>
+<g transform="translate(376 154)">
+  <rect width="168" height="118" rx="12" fill="#090614" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#130a26" stroke="#40246b"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#f5edff"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#b8a7d9"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#00e5ff"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="rgba(0, 0, 0, 0.87)"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#133d35"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#86efac"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#402130"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#fca5a5"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Synthwave Noir</text>
+</g>
+<g transform="translate(560 154)">
+  <rect width="168" height="118" rx="12" fill="#070a14" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#0d1224" stroke="#2b3e72"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#e4f2ff"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#8ea6d6"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#00d9ff"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="rgba(0, 0, 0, 0.87)"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#133d35"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#86efac"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#402130"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#fca5a5"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Cyberpunk Rain</text>
+</g>
+<g transform="translate(744 154)">
+  <rect width="168" height="118" rx="12" fill="#d2b585" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#fbf8ef" stroke="#c4ad7e"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#2b2620"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#5b5040"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#6b4423"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(227, 231, 218)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#2f6b3f"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(240, 223, 214)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#a3261d"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">File Cabinet</text>
+</g>
+<g transform="translate(8 300)">
+  <rect width="168" height="118" rx="12" fill="#173f70" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#225a99" stroke="rgba(255, 255, 255, 0.35)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#f2f7ff"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#e9f1fa"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#ffcf5c"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="rgba(0, 0, 0, 0.87)"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#133d35"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#86efac"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#402130"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#fca5a5"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Blueprint</text>
+</g>
+<g transform="translate(192 300)">
+  <rect width="168" height="118" rx="12" fill="#c49a6c" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#fffdf7" stroke="#e2d8c6"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#2a2520"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#5d554b"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#b3261e"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(228, 237, 227)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#1b6b43"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(246, 227, 221)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#b3261e"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Corkboard</text>
+</g>
+<g transform="translate(376 300)">
+  <rect width="168" height="118" rx="12" fill="#9fb04f" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#f6f3e6" stroke="rgba(47, 30, 14, 0.28)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#2f1e0e"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#413120"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#8b5c22"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(229, 228, 207)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#5f6521"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(233, 219, 206)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#8a2f1f"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Green Earthy</text>
+</g>
+<g transform="translate(560 300)">
+  <rect width="168" height="118" rx="12" fill="#8fb0d2" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#eef2f8" stroke="rgba(22, 40, 61, 0.24)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#16283d"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#293a58"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#2f6ba8"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(211, 228, 231)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#0a6c5d"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(228, 220, 223)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#9c3a2a"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Blue Earthy</text>
+</g>
+<g transform="translate(744 300)">
+  <rect width="168" height="118" rx="12" fill="#b0a0d8" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#f4f1fa" stroke="rgba(43, 35, 64, 0.24)"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#2b2340"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#3d3352"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#6d54a8"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fff"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="rgb(221, 227, 230)"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#2c6c4c"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="rgb(233, 219, 229)"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#9c3a4a"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Lavender Earthy</text>
+</g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 154" width="376" height="154">
+<g transform="translate(8 8)">
+  <rect width="168" height="118" rx="12" fill="#fdfaf5" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#fffefc" stroke="#e4dcd2"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#1d1b18"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#6e675e"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#a46707"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#fffffe"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#a9fac4"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#1c6e41"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#ffdad2"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#93000a"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Studio (light)</text>
+</g>
+<g transform="translate(192 8)">
+  <rect width="168" height="118" rx="12" fill="#15130f" stroke="#8b8b95" stroke-opacity=".25"/>
+  <rect x="12" y="12" width="144" height="78" rx="8" fill="#110e09" stroke="#4c463e"/>
+  <rect x="22" y="22" width="70" height="7" rx="3.5" fill="#e5e2de"/>
+  <rect x="22" y="35" width="104" height="5" rx="2.5" fill="#cdc5bb"/>
+  <rect x="22" y="52" width="44" height="18" rx="9" fill="#ffb865"/>
+  <rect x="31" y="59" width="26" height="4" rx="2" fill="#472a00"/>
+  <rect x="72" y="52" width="38" height="18" rx="9" fill="#00522b"/>
+  <rect x="80" y="59" width="22" height="4" rx="2" fill="#a3f4be"/>
+  <rect x="116" y="52" width="36" height="18" rx="9" fill="#93000a"/>
+  <rect x="124" y="59" width="20" height="4" rx="2" fill="#ffdad2"/>
+  <text x="84" y="136" text-anchor="middle" font-size="12" fill="#8b8b95" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Studio (dark)</text>
+</g>
+</svg>
