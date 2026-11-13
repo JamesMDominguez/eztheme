@@ -3,8 +3,10 @@
 import { build } from 'esbuild';
 import { writeFileSync } from 'node:fs';
 
-for (const entry of ['index', 'dom', 'mui']) {
-    await build({ entryPoints: [`src/${entry}.ts`], outfile: `dist/cjs/${entry}.cjs`, bundle: true, format: 'cjs', platform: 'neutral', target: 'es2020' });
+// One CommonJS file per entry. The smaller entries (color, derive, forms,
+// layout, tokens, app-themes) let an app load one piece without every theme.
+for (const entry of ['index', 'dom', 'mui', 'color', 'derive', 'forms', 'layout', 'tokens', 'themes/app']) {
+    await build({ entryPoints: [`src/${entry}.ts`], outfile: `dist/cjs/${entry.replace('/', '-')}.cjs`, bundle: true, format: 'cjs', platform: 'neutral', target: 'es2020' });
 }
 await build({
     entryPoints: ['src/bundle.ts'], outfile: 'dist/eztheme.min.js', bundle: true, format: 'esm', target: 'es2020', minify: true, legalComments: 'none',

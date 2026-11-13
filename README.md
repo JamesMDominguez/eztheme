@@ -22,6 +22,10 @@ No build step? Use the stylesheets directly, or copy `dist/eztheme.min.js` into 
 <html data-eztheme="corkboard">                    <!-- pick one -->
 ```
 
+### Smaller imports
+
+`eztheme` loads every theme. To load one piece, import its entry instead: `eztheme/color`, `eztheme/derive` (the surface ladder, status pairs and accent remaps), `eztheme/tokens`, `eztheme/layout`, `eztheme/forms` (the form themes and their contrast contract) or `eztheme/app-themes`. Only `eztheme/forms` includes the form themes.
+
 ## Use it
 
 ```js
