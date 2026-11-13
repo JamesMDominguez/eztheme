@@ -7,6 +7,7 @@ export * from './color.js';
 export * from './derive.js';
 export * from './tokens.js';
 export * from './forms.js';
+export * from './layout.js';
 export type { AppTheme, FormTheme, StudioTheme, Theme, TokenPairs } from './types.js';
 export { APP_THEMES, STUDIO };
 

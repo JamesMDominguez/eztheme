@@ -29,6 +29,20 @@
   input { font: inherit; padding: 10px 12px; border-radius: var(--ez-radius, 8px); border: 1px solid var(--ez-outline); background: var(--ez-surface); color: var(--ez-text); }
   .err { color: var(--ez-danger-ink); font-size: 13px; }
   code { font: 12px ui-monospace, Menlo, monospace; }
+  .rows { display: grid; gap: 8px; }
+  .lrow { display: grid; grid-template-columns: 40px 1fr auto; column-gap: 14px; align-items: center; min-height: var(--ez-row-height); box-sizing: border-box; padding: var(--ez-row-pad-y) 16px; border: 1px solid var(--ez-border); border-radius: var(--ez-card-radius); background: var(--ez-surface); }
+  .lrow .ic { width: 40px; height: 40px; border-radius: var(--ez-corner-medium); background: var(--ez-accent-soft); grid-row: span 2; }
+  .lrow b { font-size: var(--ez-row-title-size); line-height: var(--ez-row-title-line-height); height: calc(var(--ez-row-title-size) * var(--ez-row-title-line-height)); display: flex; gap: 8px; align-items: center; }
+  .lrow small { display: block; color: var(--ez-text-muted); line-height: var(--ez-row-meta-line-height); margin-top: var(--ez-row-gap); font-size: 12px; }
+  .lrow .ic, .lrow .btn { align-self: center; }
+  .lrow .ic { width: 36px; height: 36px; }
+  .lrow .chip { height: var(--ez-chip-height); padding: 0 var(--ez-chip-pad-x); display: inline-flex; align-items: center; box-sizing: border-box; font-weight: 600; font-size: var(--ez-type-label-small, 11px); }
+  .shell { display: grid; grid-template-columns: var(--ez-rail-column) 1fr; grid-template-rows: var(--ez-bar-height) 160px; border: 1px solid var(--ez-outline-variant); border-radius: var(--ez-card-radius); overflow: hidden; background: var(--ez-surface-muted); }
+  .shell .bar { grid-column: 1 / -1; display: flex; align-items: center; padding: 0 16px; font-size: var(--ez-type-title-medium, 15px); font-weight: 700; }
+  .shell .rail { display: grid; align-content: start; justify-items: center; gap: 12px; padding-top: 4px; }
+  .shell .ind { width: var(--ez-rail-indicator-width); height: var(--ez-rail-indicator-height); border-radius: var(--ez-corner-full); background: var(--ez-fill); }
+  .shell .ind.on { background: var(--ez-accent-soft); }
+  .shell .page { margin: 0 12px 12px 0; background: var(--ez-surface); border-radius: var(--ez-corner-extra-large); padding: 16px 20px; color: var(--ez-text-muted); font-size: 13px; }
   #names { font: 12px/1.6 ui-monospace, Menlo, monospace; color: var(--ez-text-muted); white-space: pre-wrap; max-height: 260px; overflow: auto; }
 </style>
 </head>
@@ -40,6 +54,10 @@
     <select id="pick" aria-label="Theme"></select>
     <button class="btn neutral" id="next">Next theme</button>
     <span id="meta"></span>
+  </div>
+  <div class="bar">
+    <select id="layout" aria-label="Layout"><option value="ezinputs">ezinputs layout</option><option value="studio">Studio layout</option></select>
+    <select id="density" aria-label="Density"><option value="default">Default rows</option><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select>
   </div>
 
   <h2>Surfaces</h2>
@@ -63,11 +81,18 @@
     <div class="card" style="background:var(--ez-surface-container)"><b>Section</b><p>A panel one step back from the card.</p></div>
   </div>
 
+  <h2>Layout</h2>
+  <div class="shell"><div class="bar">Top bar</div><div class="rail"><div class="ind on"></div><div class="ind"></div><div class="ind"></div></div><div class="page">The rail column, bar height, indicator and corners come from the layout.</div></div>
+  <div class="rows" style="margin-top:14px">
+    <div class="lrow"><div class="ic"></div><b>Intake form <span class="chip" style="background:var(--ez-success-soft);color:var(--ez-success-ink)">Published</span></b><button class="btn neutral" style="grid-row:span 2">Open</button><small>42 submissions · edited today</small></div>
+    <div class="lrow"><div class="ic"></div><b>Volunteer sign-up <span class="chip" style="background:var(--ez-warning-soft);color:var(--ez-warning-ink)">Draft</span></b><button class="btn neutral" style="grid-row:span 2">Open</button><small>Not shared yet</small></div>
+  </div>
+
   <h2>Tokens written</h2>
   <div class="card"><div id="names"></div></div>
 </main>
 <script type="module">
-  import { THEMES, applyTheme } from '../dist/eztheme.min.js';
+  import { THEMES, applyTheme, applyLayout } from '../dist/eztheme.min.js';
   const $ = (id) => document.getElementById(id);
   const key = (t) => (t.group === 'form' ? `form:${t.id}` : t.id);
   const groups = { app: 'App themes', studio: 'Studio', form: 'Form themes' };
@@ -78,14 +103,19 @@
   }
   const rungs = [['--ez-surface-muted', 'page'], ['--ez-surface', 'surface'], ['--ez-surface-low', 'low'], ['--ez-surface-container', 'container'], ['--ez-surface-high', 'high'], ['--ez-fill', 'fill']];
   $('ladder').innerHTML = rungs.map(([v, n]) => `<div style="background:var(${v})">${n}</div>`).join('');
+  let layoutTokens = {};
+  const layout = () => { layoutTokens = applyLayout($('layout').value, { density: $('density').value }); };
   const show = (id) => {
-    const tokens = applyTheme(id);
+    const themeTokens = applyTheme(id);
+    layout();
+    const tokens = { ...themeTokens, ...layoutTokens };
     const t = THEMES.find((x) => key(x) === id);
     $('meta').textContent = `${t.group} · ${document.documentElement.style.colorScheme}`;
     $('names').textContent = Object.entries(tokens).filter(([k]) => !k.startsWith('--md-ref')).map(([k, v]) => `${k}: ${v}`).join('\n');
     history.replaceState(null, '', `#${id}`);
   };
   $('pick').onchange = () => show($('pick').value);
+  $('layout').onchange = $('density').onchange = () => show($('pick').value);
   $('next').onclick = () => { const s = $('pick'); s.selectedIndex = (s.selectedIndex + 1) % s.options.length; show(s.value); };
   const start = decodeURIComponent(location.hash.slice(1)) || 'corkboard';
   $('pick').value = start; show($('pick').value || 'light');

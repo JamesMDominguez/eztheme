@@ -27,6 +27,7 @@
     },
     "./themes.css": "./dist/themes.css",
     "./studio.css": "./dist/studio.css",
+    "./layouts.css": "./dist/layouts.css",
     "./bundle": "./dist/eztheme.min.js",
     "./package.json": "./package.json"
   },

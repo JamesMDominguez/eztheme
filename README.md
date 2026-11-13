@@ -58,10 +58,37 @@ Photo Studio's look: amber on warm neutrals, in light and dark, written directly
 
 <img src="docs/studio.svg" alt="The Studio theme in light and dark" width="380">
 
+## Layout
+
+A layout is the sizes a theme's screens are built from: spacing, corners, a type scale, list-row and chip sizes at three densities, the navigation rail, the top bar, and where the page sits in the window. It's tokens, not markup.
+
+- **`ezinputs`**: ezinputs' own numbers. These are its list rows (71.2px default, 61.04 comfortable, 53.28 compact), 24/20px chips, the 80px rail with its 56×32 indicator, and its type scale.
+- **`studio`**: Photo Studio's shell. It has a 72px bar, a 104px rail column and a sheet with 28px corners, plus the Studio theme's type sizes.
+
+```js
+import { applyLayout } from 'eztheme/dom';
+applyLayout('ezinputs', { density: 'compact' });   // --ez-row-height: 53.28px, --ez-chip-height: 20px, …
+```
+
+```html
+<link rel="stylesheet" href="vendor/layouts.css">  <!-- before themes.css -->
+<html data-ezlayout="ezinputs" data-ezdensity="compact">
+```
+
+```css
+.row  { min-height: var(--ez-row-height); padding: var(--ez-row-pad-y) 16px; border-radius: var(--ez-card-radius); }
+.rail { width: var(--ez-rail-column); }
+h2    { font-size: var(--md-sys-typescale-title-large); }
+```
+
+Corners and type sizes are written under Material 3 names as well (`--md-sys-shape-corner-large`, `--md-sys-typescale-title-large`). Everything else is `--ez-*`. A theme's own corner wins over the layout's: Retro keeps its 14px, and Retro Game keeps its square cards. `radiusScale` makes every corner rounder or squarer. Use `withLayout(STUDIO_LAYOUT, { page: { padY: 30 } })` to change a few numbers.
+
+The layout modes are there as data too. They are Studio, Cards, Flat and Open, plus six that belong to one theme (Desktop for 90s Retro-Tech, Board for Corkboard, …). For each mode, eztheme says which surface the nav and the page draw on, and which modes to offer under which theme. Drawing those surfaces stays the app's job.
+
 ## What's not in it
 
 - **Fonts.** Themes name font stacks but don't load fonts. Load them yourself (Google Fonts, `next/font`, …).
-- **Component styling.** A theme gives colours, fonts and corners. Corkboard's pins and File Cabinet's tabs are styling in the app that uses them.
+- **Component styling and page layouts.** A theme gives colours, fonts and corners, and a layout gives sizes. Corkboard's pins and File Cabinet's tabs are styling in the app that uses them.
 - **Animated form scenes.** These are not included yet.
 
 ## Demo and pictures
