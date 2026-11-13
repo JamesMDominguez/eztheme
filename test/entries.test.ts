@@ -31,4 +31,10 @@ describe('entry points', () => {
         expect(cjs).not.toContain('default-light');
         expect(cjs).not.toContain('mountain-ridge');
     });
+    it('every entry has a typesVersions path too, for TypeScript set to node10 resolution', () => {
+        const subpaths = Object.entries(pkg.exports)
+            .filter(([k, v]) => k !== '.' && typeof v === 'object')
+            .map(([k, v]) => [k.slice(2), [(v as { types: string }).types.slice(2)]]);
+        expect(pkg.typesVersions['*']).toEqual(Object.fromEntries(subpaths));
+    });
 });

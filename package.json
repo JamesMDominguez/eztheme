@@ -9,6 +9,34 @@
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "dom": [
+        "dist/dom.d.ts"
+      ],
+      "mui": [
+        "dist/mui.d.ts"
+      ],
+      "color": [
+        "dist/color.d.ts"
+      ],
+      "derive": [
+        "dist/derive.d.ts"
+      ],
+      "forms": [
+        "dist/forms.d.ts"
+      ],
+      "layout": [
+        "dist/layout.d.ts"
+      ],
+      "tokens": [
+        "dist/tokens.d.ts"
+      ],
+      "app-themes": [
+        "dist/themes/app.d.ts"
+      ]
+    }
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

@@ -2,6 +2,49 @@
 // Generated from ezinputs (github.com/JamesMDominguez/chabotform) on 2026-11-12:
 // the resolved MUI palettes, fonts and radii of its app themes, and its form
 // themes' token bags. Edit here from now on; ezinputs re-exports this.
+//
+// Why each theme's accents are what they are (`accents`, read by remapAccent).
+// Across all of them, `green` is the quiet one (a form type, which is metadata)
+// and `jade` the loud one (a status, which is the signal). They differ in
+// saturation, not brightness, because the app evens out lightness.
+//  - Retro: Sun-bleached 70s print: avocado, mustard, burnt orange, rust,
+//    petrol. Same rule as the others — 'green' is the quiet one (form type is
+//    metadata), 'jade' the loud one (status is the signal), held apart by
+//    saturation rather than brightness.
+//  - File Cabinet: The inks a file drawer holds: ballpoint blue, ledger
+//    green, mimeograph purple, stamp red, rust and ochre. Material's bright
+//    hues read as a web app's on manila. Each is dark enough to be text on
+//    the folder and the sheet (4.5:1), since these also colour figures.
+//  - Corkboard: The markers kept in a tin by the board. Material's pastels
+//    read as a web app's pinned to cork. Each is dark enough to be text on
+//    the white card and the yellow note (4.5:1), since these also colour
+//    figures.
+//  - Blueprint: The app's hues as coloured pencil on drafting blue, light
+//    enough to read on it. Material's were tuned for white paper and fell to
+//    2.9:1 here (the portal's comp-time figure). Same green/jade split. Each
+//    sits light enough for small text (4.5:1) on the panels, not only for the
+//    large figures.
+//  - Retro Game: A cartridge-era palette around the theme's own console red
+//    and ink. The chips' CSS keeps only each hue and lays it at one value, so
+//    these steer the hue; Material's blue and green were the only colours on
+//    the screen from no console. Same green/jade split as the others: the
+//    quiet one for form type, the loud one for status.
+//  - Green Earthy: The five tones of a natural-earth palette — sand, olive,
+//    ochre, taupe, chocolate — rather than the forest greens this theme used
+//    to run on. 'green' is deliberately the quiet one (form type, which is
+//    metadata) and 'jade' the loud one (status, which is the signal); they
+//    are held apart by saturation for the reason given above, since a
+//    brightness difference would not survive the normalisation.
+//     Sage-olive rather than khaki: #8a8a52 was so far toward taupe that
+//     the rails read brown on a theme called Green Earthy.
+//  - Blue Earthy: Runs the same rule in a cold family: sea-grey for the quiet
+//    green, a live teal-green for the loud one, and the theme's own copper
+//    for the warms. Same saturation split between green and jade, since the
+//    theme layer normalises these to one lightness and a brightness
+//    difference would not survive it.
+//  - Lavender Earthy: Dried sage for the quiet green, a clear green for
+//    status, and the warms pulled toward the theme's dusty rose rather than
+//    Material's orange.
 
 import type { AppTheme } from '../types.js';
 
